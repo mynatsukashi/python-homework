@@ -1,4 +1,4 @@
-Part 1: Research Git & Github
+Part 1: Research Git & Github \n
 What is git?
 What is a version control system (VCS)?
 Version Control System is a system that helps detecting and recording the changes that have been made in file, project, code etc. There are distributed and centralized VCS systems. One example of distributed VCS is Git.
