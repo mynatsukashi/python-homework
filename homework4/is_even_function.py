@@ -1,7 +1,21 @@
-def num(n):
-    if n%2==0:
-        return "even"
-    return "odd"
+def is_even(n):
+    return n%2==0
 
-print(num(2))
-print(num(3))
+num = int(input('Enter a number: '))
+ 
+if is_even(num):
+    print(f"{num} is even")
+else: 
+    print(f"{num} is odd")
+
+    
+
+
+
+
+
+
+
+
+
+

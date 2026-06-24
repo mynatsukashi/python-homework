@@ -1,9 +1,12 @@
 # Collect into a list
-product = int(input("How many items do you want to add? "))
-
 items = []
+item_count = int(input("How many items:"))
 
-
+for _ in range (item_count):
+    items.append(input('Item: '))
+print(items)
+print(f"You got {item_count} items")
+    
 
 
 
