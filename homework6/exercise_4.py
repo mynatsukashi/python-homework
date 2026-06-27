@@ -4,5 +4,5 @@ grades = {
     "natali": 95,   
 }
 
-for i, item in grades.items():
-    print(f"{i.title()}: {item}")
+for name, grade in grades.items():
+    print(f"{name.title()}: {grade}")
