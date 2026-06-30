@@ -1,5 +1,5 @@
-nums = (1,2,3)
+num = [value**3 for value in range ( 3, 30)]
 
-x,y,z=nums
+print(num)
 
-print(x,y,z)
+
