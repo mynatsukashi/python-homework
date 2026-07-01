@@ -13,7 +13,6 @@ def read_notes():
         # return empty file
         return []
 
-
 # Define function that writes notes in the file
 def save_notes(notes):
     with open (FILE, "w") as f:

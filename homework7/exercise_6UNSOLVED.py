@@ -14,7 +14,7 @@ try:
 except KeyError:
     print(f"No score recorded for {choose_name}")
 else:
-    print(f"{choose_name}'s score is {chosen}")
+    print(f"{choose_name}'s score is {chosen()}")
 finally:
     print("Well done!")
 
