@@ -1,3 +1,5 @@
+FILENAME = "notes.txt"
+
 # Define 
 def load_notes():
     # The file may not exist yet on the very first run — catch that and

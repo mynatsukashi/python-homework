@@ -4,7 +4,7 @@ scores = {
     "emily": 60
 }
 
-choose_name = input("Whose score? ").title().strip()
+choose_name = input("Whose score? ").lower().strip()
 def chosen():
     if choose_name in scores:
         return scores[choose_name]
