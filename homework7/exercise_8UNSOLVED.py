@@ -1,30 +1,39 @@
-notes = []
+# Name "notes.txt" with constant variable
+FILE = "notes.txt"
 
-with open ("notes.txt") as f:
-    file = f.read()
-print(file)
+# Define function that reads notes in FILE
+def read_notes():
+    try: 
+        # Try to read the file
+        with open ( FILE, "r") as f:
+            # return only if line.strip(), so line has no spaces and new lines
+            return [line.strip() for line in f if line.strip()]
+        # If file doesn't exist
+    except FileNotFoundError:
+        # return empty file
+        return []
 
-# I didn't understand how to write the block of TRY here, therefore I did it a little bit different
-try:
-    "notes.txt"
-except FileNotFoundError:
-    # If program doesn't find the file, it will print this message
-    print("File is not found")
-else: 
-    # If file exists, ask user to add a note
-    add_note =input("Add a note: ")
-    # Adds this note in notes list
+
+# Define function that writes notes in the file
+def save_notes(notes):
+    with open (FILE, "w") as f:
+        for note in notes:
+            f.write(note + "\n")
+
+notes = read_notes()
+print(f"You have {len(notes)} note(s)")
+for i, item in enumerate(notes, 1):
+    print(f"{i}. {item}")
+
+add_note = input("Add a note: ").strip()
+
+if add_note: 
     notes.append(add_note)
-finally:
-    # Here the structure of code is incorrect, as it doesn't work as it should
-    def save_note():
-        for i, note in enumerate(notes, 1):
-            print(f"{i}. {note}")
-            # I tried to print final results in "notes.txt" file, but it doesn't work
-        with open ("notes.txt","a") as f:
-            f.write(save_note + "\n")
+    save_notes(notes)
     print("Saved!")
-
+else:
+    print("Nothing was added")
+    
 
 
 
