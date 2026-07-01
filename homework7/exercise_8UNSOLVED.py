@@ -11,7 +11,7 @@ except FileNotFoundError:
     # If program doesn't find the file, it will print this message
     print("File is not found")
 else: 
-    # If file does exist, ask user to add a note
+    # If file exists, ask user to add a note
     add_note =input("Add a note: ")
     # Adds this note in notes list
     notes.append(add_note)
