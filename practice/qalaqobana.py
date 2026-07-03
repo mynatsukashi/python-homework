@@ -34,7 +34,7 @@ cities = ["Tbilisi", "Kutaisi", "Telavi", "Batumi", "Rustavi", "Gori", "Tskhaltu
 # Define function to easily read a list of cities. In case of non-existed file, print an empty file.
 def read_city():
     try:
-        with open (CITY, "r") as f:
+        with open (CITY) as f:
             return [item.strip() for item in f if item.strip()]
     except FileNotFoundError:
         return []
