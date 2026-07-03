@@ -2,13 +2,16 @@
 
 class Counter:
     def __init__(self, count):
-        self.count = 0
+        self.count = count
     
     def increment(self):
-        self.count += 1
+        return self.count + 1
     
     def value(self): 
         return self.count
+
+con = Counter(0)
+
+
+
     
-
-
