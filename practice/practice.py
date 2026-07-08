@@ -1,7 +1,12 @@
-class Vehicle:
-    def __init__(self, max_speed, mileage):
-        self.max_speed = max_speed
-        self.mileage = mileage
+import math
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+    @property
+    def area(self):
+        return math.pi * self.radius * self.radius
+ 
+c = Circle(5)
+print(c.area)  # no () — like an attribute
+c.radius = 10  # recomputes
 
-vehicle1 = Vehicle(200, 18)
-print(f"My car's max speed is {vehicle1.max_speed} and mile age is {vehicle1.mileage}")

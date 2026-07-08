@@ -14,18 +14,22 @@ def hint():
     return hint
 
 attempt = 3
+won = False
 
 print("Choosing a word...")
-time.sleep(2)
+time.sleep(1)
 print(hint())
-chosen_city = input("What word have I chosen?").lower().strip()
 
-if chosen_city != rand_city:
-        while attempt>1:
-            print(f"Wrong! Number of attempts:{attempt}")
-            attempt-=1
-            again = input("Try again: ")
-        else:
-            print("Game is over. You lost!")
+while 0 < attempt:
+    chosen_city = input("What word have I chosen?").lower().strip()
+
+    if chosen_city == rand_city:
+        won = True
+        break
+    print(f"Wrong! Number of attempts:{attempt}")
+    attempt-=1
+
+if won:
+    print("You won")
 else:
-        print("You won!")
+    print("You lost")
