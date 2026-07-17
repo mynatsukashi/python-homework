@@ -30,6 +30,8 @@ while 0 < attempt:
     attempt-=1
 
 if won:
-    print("You won")
+    print("You won!")
 else:
-    print("You lost")
+    print("You lost :(")
+
+print(f"It was {rand_city.title()}")
